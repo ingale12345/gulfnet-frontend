@@ -8,6 +8,7 @@ import Unauthorized from "@/pages/Unauthorized";
 import Home from "@/pages/customer/Home";
 import HQDashboard from "@/pages/hq/Dashboard";
 import ManagerDashboard from "@/pages/manager/Dashboard";
+import NotFound from "@/pages/NotFound";
 
 export const router = createBrowserRouter([
   {
@@ -45,5 +46,9 @@ export const router = createBrowserRouter([
         children: [{ index: true, element: <ManagerDashboard /> }],
       },
     ],
+  },
+  {
+    path: "*",
+    element: <NotFound />,
   },
 ]);
