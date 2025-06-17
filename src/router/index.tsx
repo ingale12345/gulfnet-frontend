@@ -9,6 +9,7 @@ import Home from "@/pages/customer/Home";
 import HQDashboard from "@/pages/hq/Dashboard";
 import ManagerDashboard from "@/pages/manager/Dashboard";
 import NotFound from "@/pages/NotFound";
+import DiningTablePage from "@/pages/customer/DiningTablePage";
 
 export const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ export const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
       // customer routes are public
+      {
+        path: "r/:restaurantCode/:tableGroup/:tableNumber",
+        element: <DiningTablePage />,
+      },
     ],
   },
   {
